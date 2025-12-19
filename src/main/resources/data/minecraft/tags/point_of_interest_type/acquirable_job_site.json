@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values":[
+    {
+      "id": "mayview_villagers:pokeballvendor_poi",
+      "required": false
+    }
+  ]
+}
