@@ -1,5 +1,6 @@
-package com.mayview.practicemod;
+package com.github.Recon1991.mayview_villagers;
 
+import com.github.Recon1991.mayview_villagers.villager.ModVillagers;
 import com.mojang.logging.LogUtils;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.neoforged.api.distmarker.Dist;
@@ -16,14 +17,14 @@ import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
-@Mod(Mayviewmod.MOD_ID)
-public class Mayviewmod {
-    public static final String MOD_ID = "somemayviewmod";
+@Mod(MayviewVillagers.MOD_ID)
+public class MayviewVillagers {
+    public static final String MOD_ID = "mayview_villagers";
     private static final Logger LOGGER = LogUtils.getLogger();
 
     // The constructor for the mod class is the first code run when your mod is loaded.
     // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
-    public Mayviewmod(IEventBus modEventBus, ModContainer modContainer)
+    public MayviewVillagers(IEventBus modEventBus, ModContainer modContainer)
     {
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
@@ -32,6 +33,9 @@ public class Mayviewmod {
         // Note that this is necessary if and only if we want *this* class (ExampleMod) to respond directly to events.
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
+
+        // ModVillager Class EventBus
+        ModVillagers.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);

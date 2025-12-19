@@ -1,6 +1,7 @@
-# Mayview Neoforge Intellij Template
+# Mayview Villagers
 
-- Preconfigured Intellij IDEA project template for Mayview development using NeoForge 21.1.172.
+
+- Custom villagers and wandering traders for Mayview!
 ---
 ## Supported Versions
 - Minecraft 1.21.1
