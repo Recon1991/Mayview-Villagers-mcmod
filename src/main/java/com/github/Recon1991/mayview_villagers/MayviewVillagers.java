@@ -1,5 +1,6 @@
 package com.github.Recon1991.mayview_villagers;
 
+import com.github.Recon1991.mayview_villagers.event.ModEvents;
 import com.github.Recon1991.mayview_villagers.villager.ModVillagers;
 import com.mojang.logging.LogUtils;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -36,6 +37,8 @@ public class MayviewVillagers {
 
         // ModVillager Class EventBus
         ModVillagers.register(modEventBus);
+
+        // ModEvents.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
